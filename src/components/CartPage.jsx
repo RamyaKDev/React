@@ -1,11 +1,7 @@
 import { useEffect, useState } from "react";
 import { cartProducts } from "../api";
-import { useNavigate } from "react-router-dom";
-
-function CartPage(){
-   
+function CartPage(){   
     const [cartitems,setCartitems]=useState([]);
-
     useEffect(()=>{
         cartProducts()
         .then((res)=>setCartitems(res.data))
